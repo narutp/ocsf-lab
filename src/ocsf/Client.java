@@ -17,9 +17,9 @@ public class Client extends ObservableClient {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		Client client = new Client("158.108.136.102", 5555);
+		Client client = new Client("158.108.235.127", 5555);
 		Scanner scan = new Scanner(System.in);
-		client.closeConnection();
+		client.openConnection();
 		while(client.isConnected()) {
 			client.sendToServer(scan.nextLine());
 		}
